@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  web:
+    build: ./web
+    ports: 
+      - 3000:3000
+  server:
+    build: ./server
+    ports: 
+      - 5000:5000
+  db: 
+    image: mongo:4.0-xenial
+    ports: 
+      - 27017:27017
